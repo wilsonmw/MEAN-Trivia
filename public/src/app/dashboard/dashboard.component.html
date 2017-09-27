@@ -24,6 +24,6 @@
   <tr *ngFor="let game of games | gameFilter: search">
     <td>{{game.name}}</td>
     <td>{{game.score}}/3</td>
-    <td>{{game.percentage}}</td>
+    <td>{{game.percentage | number: "1.2-2"}}%</td>
   </tr>
 </table>
