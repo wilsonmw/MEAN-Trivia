@@ -1,0 +1,31 @@
+a{
+    display: inline-block;
+}
+.errorMessage{
+    color: red;
+}
+#question{
+    width: 400px;
+    height: 60px;
+}
+.answer{
+    width: 400px;
+}
+form{
+    text-align: right;
+    width: 50%;
+}
+.cancelButton{
+    border: 1px solid black;
+    text-align: center;
+    width: 100px;
+    font-family: sans-serif;
+    font-size: .8em;
+    box-shadow: 5px 5px 2px gray;
+    /* height: 30px; */
+    vertical-align: top;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+
+}

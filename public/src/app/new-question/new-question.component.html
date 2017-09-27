@@ -1,0 +1,17 @@
+<a [routerLink]="['/dashboard']">Home</a> |
+<a [routerLink]="['/createNew']">Add a Question</a>
+
+<h1>New Question</h1>
+<form #questionForm="ngForm" (submit)='newQuestion()'>
+  <span class="errorMessage" *ngIf="content.invalid && content.touched">Question is required and must be at least 15 characters.</span><br>
+  Question: <input type="text" id="question" name="content" [(ngModel)]="question.content" required minlength="15" #content="ngModel"><br>
+  <span class="errorMessage" *ngIf="correctAnswer.invalid && correctAnswer.touched">Correct Answer is required.</span><br>
+  Correct Answer: <input type='text' class="answer" name="correctAnswer" [(ngModel)]="question.correctAnswer" required #correctAnswer="ngModel"><br>
+  <span class="errorMessage" *ngIf="fakeAnswer1.invalid && fakeAnswer1.touched">Fake Answer 1 is required.</span><br>
+  Fake Answer 1: <input type='text' class="answer" name="fakeAnswer1" [(ngModel)]="question.fakeAnswer1" required #fakeAnswer1="ngModel"><br>
+  <span class="errorMessage" *ngIf="fakeAnswer2.invalid && fakeAnswer2.touched">Fake Answer 2 is required.</span><br>
+  Fake Answer 2: <input type='text' class="answer" name="fakeAnswer2" [(ngModel)]="question.fakeAnswer2" required #fakeAnswer2="ngModel"><br>
+  <br>
+  <a [routerLink]="['/dashboard']" class="cancelButton">Cancel</a>
+  <input type="submit" class="cancelButton" value="Add Question" [disabled]="questionForm.invalid">
+</form>

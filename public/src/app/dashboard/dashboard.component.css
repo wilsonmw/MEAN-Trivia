@@ -1,0 +1,50 @@
+#playButtonBox{
+    width: 27%;
+    height: 100px;
+    background-color: gray;
+    margin-left: 20%;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 5px 5px 2px black;
+    margin-top: 50px;
+    color: lightblue;
+}
+#playButton{
+    width: 50px;
+    height: 30px;
+    box-shadow: 3px 3px 2px black;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    border: 2px solid blue;
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 17%;
+    background-color: lightgray;
+}
+tr, td, th{
+    border: 1px solid black;
+}
+th{
+    text-align: left;
+}
+#logout{
+    margin-left: 50%;
+}
+#search{
+    margin-left: 40%;
+    margin-top: 20px;
+
+}
+#resultMessage{
+    border: 2px solid black;
+    background-color: lightgreen;
+    width:43%;
+    margin-left: 14%;
+    margin-top: 20px;
+    padding: 1%;
+}

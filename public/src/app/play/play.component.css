@@ -1,0 +1,27 @@
+.cancelButton{
+    border: 1px solid black;
+    text-align: center;
+    width: 100px;
+    font-family: sans-serif;
+    font-size: .8em;
+    box-shadow: 5px 5px 2px gray;
+    /* height: 30px; */
+    vertical-align: top;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+.questionBox{
+    border: 2px solid black;
+    padding: 10px;
+    margin-left: 5%;
+    width: 60%;
+    margin: 2%;
+}
+#buttons{
+    margin-left: 50%;
+}
+.errorMessages{
+    color: red;
+}

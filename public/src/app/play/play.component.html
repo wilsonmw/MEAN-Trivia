@@ -1,0 +1,36 @@
+<h4>Hi {{player}}!</h4>
+<h4>Choose an answer for each of the questions and submit the test once done.</h4>
+<h4>Good luck!</h4>
+
+<form (submit)="submitGame()" #gameForm="ngForm">
+  <div class="questionBox">
+    <span class="errorMessages" *ngIf="q1.invalid">You must provide an answer to Question 1</span><br>
+    <p>1. {{ threeToPlay[0].content }}</p>
+    
+      <input type="radio" name="q1" value="{{threeToPlay[0].correctAnswer}}" required [(ngModel)]="answers.q1" #q1="ngModel">{{threeToPlay[0].correctAnswer}}<br>
+      <input type="radio" name="q1" value="{{threeToPlay[0].fakeAnswer1}}" required [(ngModel)]="answers.q1" #q1="ngModel">{{threeToPlay[0].fakeAnswer1}}<br>
+      <input type="radio" name="q1" value="{{threeToPlay[0].fakeAnswer2}}" required [(ngModel)]="answers.q1" #q1="ngModel">{{threeToPlay[0].fakeAnswer2}}<br>
+      <br>
+  </div>
+  <div class="questionBox">
+      <span class="errorMessages" *ngIf="q2.invalid">You must provide an answer to Question 2</span><br>
+      <p>2. {{ threeToPlay[1].content }}</p>
+        <input type="radio" name="q2" value="{{threeToPlay[1].fakeAnswer1}}" required [(ngModel)]="answers.q2" #q2="ngModel">{{threeToPlay[1].fakeAnswer1}}<br>
+        <input type="radio" name="q2" value="{{threeToPlay[1].fakeAnswer2}}" required [(ngModel)]="answers.q2" #q2="ngModel">{{threeToPlay[1].fakeAnswer2}}<br>
+        <input type="radio" name="q2" value="{{threeToPlay[1].correctAnswer}}" required [(ngModel)]="answers.q2" #q2="ngModel">{{threeToPlay[1].correctAnswer}}<br>
+        <br>
+  </div>
+  <div class="questionBox">
+    <span class="errorMessages" *ngIf="q3.invalid">You must provide an answer to Question 3</span><br>
+    <p>3. {{ threeToPlay[2].content }}</p>
+      <input type="radio" name="q3" value="{{threeToPlay[2].fakeAnswer1}}" required [(ngModel)]="answers.q3" #q3="ngModel">{{threeToPlay[2].fakeAnswer1}}<br>
+      <input type="radio" name="q3" value="{{threeToPlay[2].correctAnswer}}" required [(ngModel)]="answers.q3" #q3="ngModel">{{threeToPlay[2].correctAnswer}}<br>
+      <input type="radio" name="q3" value="{{threeToPlay[2].fakeAnswer2}}" required [(ngModel)]="answers.q3" #q3="ngModel">{{threeToPlay[2].fakeAnswer2}}<br>
+      <br>
+  </div>
+  <div id="buttons">
+    <a [routerLink]="['/dashboard']" class="cancelButton">Cancel</a>
+    <input type="submit" class="cancelButton" value="Submit" [disabled]="gameForm.invalid">
+  </div>
+</form>
+  

@@ -1,0 +1,29 @@
+<a [routerLink]="['/dashboard']">Home</a> |
+<a [routerLink]="['/createNew']">Add a Question</a>
+<a [routerLink]="['/logout']" id="logout">Logout</a>
+
+<div id="resultMessage" *ngIf="justPlayed == true">
+  Congratulations {{game.name}}! You got {{game.score}} out of 3 correct for a percentage of {{game.percentage}}!
+</div>
+
+<div id='playButtonBox'>
+  <button id='playButton' (click)="playGame()">Play</button>
+  <h4>Click the button above to start the trivia game.</h4>
+</div>
+
+<div id="search">
+  Search: <input type='text' [(ngModel)]="search">
+</div>
+
+<table>
+  <tr>
+    <th>Name:</th>
+    <th>Score:</th>
+    <th>Percentage:</th>
+  </tr>
+  <tr *ngFor="let game of games | gameFilter: search">
+    <td>{{game.name}}</td>
+    <td>{{game.score}}/3</td>
+    <td>{{game.percentage}}</td>
+  </tr>
+</table>

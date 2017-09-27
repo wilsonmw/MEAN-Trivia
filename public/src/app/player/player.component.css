@@ -1,0 +1,20 @@
+#namePrompt{
+    background-color: lightgray;
+    margin-left: 35%;
+    margin-top: 200px;
+    padding: 20px;
+    width: 20%;
+    box-shadow: 3px 3px 5px gray;
+    border: 1px solid black;
+}
+
+#name{
+    box-shadow: 2px 2px 2px black;
+    width: 80%;
+}
+
+#nameButton{
+    width: 30%;
+    margin-top: 10px;
+    margin-left: 50%;
+}
